@@ -1,5 +1,7 @@
 # Settlement (fixture)
 
+Business function: `BACK_OFFICE` (`app.business_function`).
+
 Settlement of booked trades. Receives instructions from Booking and posts cash movements to Accounting.
 
 ## Integrations (topology)
