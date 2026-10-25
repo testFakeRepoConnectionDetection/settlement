@@ -1,0 +1,20 @@
+app:
+  name: Settlement
+  flow-enrichment:
+    data-category-field: data_category
+  integrations:
+    accounting:
+      base-url: https://accounting.internal/api/v1/cash-movements
+      target-application: Accounting
+      data-category: CASH_MOVEMENT
+      payload-format: JSON
+      payload-type: fixture.dto.CashMovementDto
+
+spring:
+  rabbitmq:
+    listener:
+      queues: settlement.instructions
+      produced-by-application: Booking
+      message:
+        data-category: SETTLEMENT_INSTRUCTION
+        payload-format: JSON
