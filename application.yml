@@ -3,20 +3,30 @@ app:
   business_function: BACK_OFFICE
   pillar: "Trade Processing"
   flow-enrichment:
-    data-category-field: data_category
+    data-field: data
+    frequency-field: frequency
   integrations:
+    documentation:
+      base-url: https://documentation.internal/api/v1/cashflows
+      target-application: Documentation
+      connection-kind: API
+      channel: /api/v1/cashflows
+      data: cashflow
+      frequency: real-time
     accounting:
       base-url: https://accounting.internal/api/v1/cash-movements
       target-application: Accounting
-      data-category: CASH_MOVEMENT
-      payload-format: JSON
-      payload-type: fixture.dto.CashMovementDto
+      connection-kind: API
+      channel: /api/v1/cash-movements
+      data: cashflow
+      frequency: daily
 
 spring:
   rabbitmq:
     listener:
-      queues: settlement.instructions
+      queues: settlement.cashflows
       produced-by-application: Booking
+      connection-kind: MQ
       message:
-        data-category: SETTLEMENT_INSTRUCTION
-        payload-format: JSON
+        data: cashflow
+        frequency: daily

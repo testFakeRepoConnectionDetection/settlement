@@ -1,8 +1,8 @@
 package fixture.flow;
 
 /**
- * Data categories on Settlement flows.
- * grep: data_category SETTLEMENT_INSTRUCTION CASH_MOVEMENT
+ * Edge attributes on Settlement flows.
+ * grep: data frequency cashflow real-time daily
  */
 public final class TransitDataTypes {
 
@@ -12,11 +12,9 @@ public final class TransitDataTypes {
   /** Node attribute pillar for Settlement. */
   public static final String PILLAR = "Trade Processing";
 
-  public static final String MQ_SETTLEMENT_INSTRUCTION = "SETTLEMENT_INSTRUCTION";
-  public static final String HTTP_CASH_MOVEMENT = "CASH_MOVEMENT";
-
-  public static final String MQ_PAYLOAD_FORMAT = "JSON";
-  public static final String HTTP_PAYLOAD_FORMAT = "JSON";
+  public static final String DATA_CASHFLOW = "cashflow";
+  public static final String FREQUENCY_REAL_TIME = "real-time";
+  public static final String FREQUENCY_DAILY = "daily";
 
   private TransitDataTypes() {}
 }
