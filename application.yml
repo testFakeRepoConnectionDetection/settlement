@@ -1,6 +1,7 @@
 app:
   name: Settlement
   business_function: BACK_OFFICE
+  pillar: "Trade Processing"
   flow-enrichment:
     data-category-field: data_category
   integrations:

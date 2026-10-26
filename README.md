@@ -1,6 +1,7 @@
 # Settlement (fixture)
 
 Business function: `BACK_OFFICE` (`app.business_function`).
+Pillar: `Trade Processing` (`app.pillar`).
 
 Settlement of booked trades. Receives instructions from Booking and posts cash movements to Accounting.
 

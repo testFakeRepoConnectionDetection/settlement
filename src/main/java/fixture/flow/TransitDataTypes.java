@@ -9,6 +9,9 @@ public final class TransitDataTypes {
   /** Node attribute business_function for Settlement. */
   public static final String BUSINESS_FUNCTION = "BACK_OFFICE";
 
+  /** Node attribute pillar for Settlement. */
+  public static final String PILLAR = "Trade Processing";
+
   public static final String MQ_SETTLEMENT_INSTRUCTION = "SETTLEMENT_INSTRUCTION";
   public static final String HTTP_CASH_MOVEMENT = "CASH_MOVEMENT";
 
